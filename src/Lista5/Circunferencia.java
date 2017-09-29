@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Lista4;
+package Lista5;
 
 /**
  *
  * @author George
  */
-public class Circunferencia {
+public class Circunferencia implements Superficie{
     double raio;
     
-    public Circunferencia() {
+    public Circunferencia(double raio) {
+        this.raio = raio;
     }
 
     public double getRaio() {
@@ -23,16 +24,13 @@ public class Circunferencia {
     public void setRaio(double raio) {
         this.raio = raio;
     }
-    
-    public static double calcComprimento(double raio) {
-        double c;
-        c = 2 * Math.PI * raio;
-        return c;
+
+    @Override
+    public double area() {
+        double r;
+        r = Math.PI * (raio * raio);
+        return r;
     }
     
-    public static double calcArea(double raio) {
-        double a;
-        a = Math.PI * (raio * raio);
-        return a;
-    }
 }
+
