@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @author dell-soncini
  */
 public class DesvioPadraoLista {
+   
        public static void main (String args[]){
         Scanner scan = new Scanner(System.in);
         boolean cont = true; 
