@@ -50,12 +50,12 @@ public class MainLivroAutor {
                 case "6":
                     main.listarLivrosDeUmAutor();
                     break;
+                case "7":
+                    System.out.println("Tchau!");
+                    break;
                 default:
                     System.out.println("Opção inválida.");
                     break;
-            }
-            if(opcao.equals("7")){
-                break;
             }
             }catch(Exception ex){
                 System.out.println("Falha na operação. Mensagem="+ ex.getMessage());
