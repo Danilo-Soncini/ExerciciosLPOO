@@ -1,5 +1,6 @@
 package Lista8;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public final class Autor {
@@ -12,7 +13,7 @@ public final class Autor {
         this.nome = nome;
         this.livros = new ArrayList();
     }
-
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -52,4 +53,5 @@ public final class Autor {
     public void setId(int id) {
         this.id = id;
     }
+    
 }

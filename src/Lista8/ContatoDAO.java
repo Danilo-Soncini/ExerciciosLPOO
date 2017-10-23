@@ -40,6 +40,11 @@ public class ContatoDAO {
         catch(Exception e) {
            e.printStackTrace();
         }
+        finally {
+            try{
+            con.close();
+            }catch(Exception e){}
+        }
         return contato;
     }
     

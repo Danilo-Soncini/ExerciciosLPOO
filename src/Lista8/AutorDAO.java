@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AutorDAO {
@@ -24,11 +25,8 @@ public class AutorDAO {
             stmt.setString(1, autor.getNome());
             stmt.executeUpdate();
             autor.setId(lerIdAutor(stmt));
-            LivroDAO ld = new LivroDAO();
-            for(Livro l: autor.getLivros()){
-                l.setAutores(autores);
-                ld.inserirLivro(l);
-            }
+            gravarLivros(autor, con);
+            
         } catch (SQLException ex) {
             throw new RuntimeException("Erro ao inserir um autor no banco de dados. Origem="+ex.getMessage());
         } finally{
@@ -99,6 +97,7 @@ public class AutorDAO {
                 autor.setId(rs.getInt("id"));
                 lista.add(autor);
             }
+            //Collections.sort(lista);
             return lista;
         } catch (SQLException ex) {
             throw new RuntimeException("Erro ao consultar uma lista de autores. Origem="+ex.getMessage());
