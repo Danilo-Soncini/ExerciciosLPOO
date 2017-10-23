@@ -52,6 +52,7 @@ public class MainLivroAutor {
                     break;
                 case "7":
                     System.out.println("Tchau!");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Opção inválida.");
