@@ -18,7 +18,7 @@ public class ExecutaMatrixThread {
         long t1 = System.currentTimeMillis();
         List<MatrixThread> mtlista = new ArrayList<MatrixThread>();
         int tamanho = 2000;
-        int totalThreads = 3;
+        int totalThreads = 10;
         int linhas = tamanho / totalThreads;
         int resto = tamanho % totalThreads;
         Matrix m1 = new Matrix(tamanho, tamanho);
