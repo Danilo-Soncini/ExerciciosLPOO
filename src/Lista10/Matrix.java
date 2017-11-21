@@ -50,7 +50,7 @@ public class Matrix {
     public void preencher() {
         for (int i = 0; i < linha; i++) {
             for (int j = 0; j < coluna; j++) {
-                matrix[i][j] = (int) (Math.random() * 1000);
+                matrix[i][j] = 2;//(int) (Math.random() * 1000);
             }
         }
     }
